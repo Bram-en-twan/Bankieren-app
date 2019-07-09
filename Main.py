@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import PhotoImage
-import tkinter
 
 newscreen = Tk()
 newscreen.geometry('1366x768')
