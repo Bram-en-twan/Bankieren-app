@@ -26,7 +26,7 @@ def add():
         print(f"plus{moneycount}")
     if "-" in moneycount:
         print(f"min{moneycount}")
-Button(newscreen,bd=0,  font=('arial',15),text=("<-"),command=add).place(x=809,y=308, width=65,height=150)
+Button(newscreen,bd=0,  font=('arial',15),text=("<"),command=add).place(x=809,y=308, width=65,height=150)
 Button(newscreen,bd=0, bg="limegreen", font=('arial',15),text=("+"),command=add).place(x=500,y=308, width=65,height=65)
 Button(newscreen,bd=0, bg="red", font=('arial',15),text=("-"),command=add).place(x=500,y=396, width=65,height=65)
 
