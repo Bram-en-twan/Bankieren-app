@@ -1,15 +1,33 @@
 from tkinter import *
+from tkinter import PhotoImage
+import tkinter
 
 newscreen = Tk()
 newscreen.geometry('1366x768')
 newscreen.configure(background='black')
+t1=Canvas(newscreen,bg="black",width=1500,height=800)
+img1 = PhotoImage(file="limegreen.png")
+img2 = PhotoImage(file="red.png")
+img3 = PhotoImage(file="grey.png")
+img4 = PhotoImage(file="midden.png")
+money=StringVar()
+Label(newscreen,image=img1,bd=0).place(x=946,y=40)
 
-Frame(newscreen,bg="orangered",width=380,height=682).place(x=40,y=40)
+Label(newscreen,image=img2,bd=0).place(x=40,y=40)
 
-Frame(newscreen,bg="darkgray",width=430,height=200).place(x=470,y=40)
-Frame(newscreen,bg="darkgray",width=430,height=200).place(x=470,y=280)
-Frame(newscreen,bg="darkgray",width=430,height=200).place(x=470,y=520)
+Label(newscreen,image=img3,text="Te besteden: \n\n $500",font=('arial',25), compound=tkinter.CENTER,bd=0,bg="black").place(x=470,y=40)
+Label(newscreen,image=img3,bd=0).place(x=470,y=280)
+Label(newscreen,image=img3,bd=0).place(x=470,y=520)
+Entry(newscreen,font=('arial',15),textvariable=money).place(x=490,y=320)
+def add():
+    moneycount = money.get()
+    if "+" in moneycount:
+        print(f"plus{moneycount}")
+    if "-" in moneycount:
+        print(f"min{moneycount}")
+Button(newscreen, font=('arial',15),text=(">"),command=add).place(x=490,y=350)
+#Label(newscreen,bg='black',width=20,height=4,text='$500',fg="white",font=('arial',20,'bold')).place(x=600,y=140)
+#f3.create_text (0, 0, text ="$5464567", font = ("arial", 20,'bold'))
 
-Frame(newscreen,bg="limegreen",width=380,height=682).place(x=946,y=40)
+#img3.text((0, 0),"Sample Text",(255,255,255))
 
-Label(newscreen,bg='darkgray',text='$500',font=('arial',20,'bold')).place(x=600,y=140)
